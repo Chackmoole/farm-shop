@@ -1,18 +1,18 @@
 .title {
-    font-size: 44px;
-    line-height: 115%;
-    font-weight: bold;
-    margin: 0;
+  font-size: 44px;
+  line-height: 115%;
+  font-weight: bold;
+  margin: 0;
 }
 
 .title--h2 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .title--h3 {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .title--h4 {
-    font-size: 24px;
+  font-size: 24px;
 }
