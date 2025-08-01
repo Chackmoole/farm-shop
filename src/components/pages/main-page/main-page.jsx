@@ -1,11 +1,8 @@
 import "./main-page-style.css";
-import { Header } from "../../layout/header/header";
-import { Footer } from "../../layout/footer/footer";
+import { About } from "../../blocks/about/about";
 
 export const MainPage = () => { 
-    return <div className="main-page">
-        <Header />
-        <Footer />
-
-    </div>
+    return <main className="main-page">
+        <About/>
+    </main>
 }
