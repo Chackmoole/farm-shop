@@ -1,8 +1,17 @@
-.feature {
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.features__title {
+  margin-bottom: 64px;
 }
 
 .features__list {
+  width: 100%;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 64px;
   padding: 0;
 }
