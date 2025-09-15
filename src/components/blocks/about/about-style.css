@@ -1,0 +1,29 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 600px;
+  background-color: #d8ecfe;
+  /* background-image: url('../../../assets/img/main-img.png');
+    background-repeat: no-repeat;
+    background-position: bottom center 20%; */
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 600px;
+}
+
+.about__inner {
+  width: 550px;
+}
+
+.about__style {
+  margin-bottom: 24px;
+}
+
+.about__img {
+  align-self: flex-end;
+}
