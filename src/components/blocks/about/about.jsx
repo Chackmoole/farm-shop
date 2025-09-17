@@ -1,5 +1,5 @@
 import { Title, TitleVariants } from "../../ui/title/title";
-import { Text, TextVariant } from "../../ui/text/text";
+import { Text, defaultVariantMapping } from "../../ui/text/text";
 import "./about-style.css";
 import { PageWrapper } from "../../layout/page-wrapper/page-wrapper";
 import mainImg from "../../../assets/img/main-img.png";
@@ -13,7 +13,7 @@ export const About = () => {
             <Title variant={TitleVariants.h1} className="about__style">
               Магазин фермерских продуктов с доставкой
             </Title>
-            <Text variant={TextVariant.normal}>
+            <Text variant={defaultVariantMapping.body1}>
               Все продукты изготавливаются под заказ. Фермеры начинают готовить
               продукты за день до отправки заказа клиентам. Именно поэтому мы
               принимаем заказы заранее и доставляем продукты максимально

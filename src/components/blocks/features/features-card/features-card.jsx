@@ -1,5 +1,5 @@
 import "./features-card-style.css";
-import { Text, TextVariant } from "../../../ui/text/text";
+import { Text, defaultVariantMapping } from "../../../ui/text/text";
 
 export const FeaturesCard = ({ title, description, subtitle, img, isFarm }) => {
   let featuresCardClass = isFarm
@@ -14,13 +14,16 @@ export const FeaturesCard = ({ title, description, subtitle, img, isFarm }) => {
       <div className="features-card__box">
         <img src={img} alt="" width={52} height={52} />
         <div className="features-card__inner">
-          <Text variant={TextVariant.small} className={featuresSubheddingClass}>
+          <Text
+            variant={defaultVariantMapping.body1}
+            className={featuresSubheddingClass}
+          >
             {subtitle}
           </Text>
-          <Text variant={TextVariant.bold}>{title}</Text>
+          <Text variant={defaultVariantMapping.body1}>{title}</Text>
         </div>
       </div>
-      <Text variant={TextVariant.normal}>{description}</Text>
+      <Text variant={defaultVariantMapping.body1}>{description}</Text>
     </li>
   );
 };

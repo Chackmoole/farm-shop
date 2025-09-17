@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`html {
+export const GlobalStyle = createGlobalStyle`
+  html {
   height: 100%;
 }
 body,
@@ -10,11 +11,15 @@ html {
 body {
   position: relative;
   min-height: 100%;
-  font-family: ${(props) => props.theme.FONTS.colorBlackText};
+  font-family: ${(props) => {
+    console.log(props);
+    return props.theme.FONTS.fontFamily;
+  }};
   font-size: ${(props) => props.theme.FONTS.fontSizeDefault};
-  font-weight: 400;
+  font-weight: 700;
   color: ${(props) => props.theme.COLORS.colorBlackText};
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
