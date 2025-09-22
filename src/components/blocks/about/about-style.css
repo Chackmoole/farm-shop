@@ -1,12 +1,6 @@
 .about {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 600px;
   background-color: #d8ecfe;
-  /* background-image: url('../../../assets/img/main-img.png');
-    background-repeat: no-repeat;
-    background-position: bottom center 20%; */
+
 }
 
 .about__wrapper {
