@@ -1,5 +1,5 @@
 export const defaultTheme = {
-  COLORS: {
+  colors: {
     colorBlackText: "#333333",
     colorGray: "#f6f6f6",
     colorWhite: "#ffffff",
@@ -11,7 +11,7 @@ export const defaultTheme = {
     colorOrange: "#fc9b27",
     colorAcitveOrange: "#fc7427",
   },
-  FONTS: {
+  fonts: {
     fontFamily: '"Inter", "Arial", sans-serif',
     fontSizeDefault: "18px",
   },

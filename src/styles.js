@@ -12,12 +12,11 @@ body {
   position: relative;
   min-height: 100%;
   font-family: ${(props) => {
-    console.log(props);
-    return props.theme.FONTS.fontFamily;
+    return props.theme.fonts.fontFamily;
   }};
-  font-size: ${(props) => props.theme.FONTS.fontSizeDefault};
+  font-size: ${(props) => props.theme.fonts.fontSizeDefault};
   font-weight: 700;
-  color: ${(props) => props.theme.COLORS.colorBlackText};
+  color: ${(props) => props.theme.colors.colorBlackText};
 }
 
 .visually-hidden {

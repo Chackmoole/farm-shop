@@ -4,7 +4,7 @@ import { spacing } from "./spacing";
 
 export const StyledText = styled.span`
   display: inline-block;
-  font-family: ${(props) => props.theme.FONTS.fontsFamily};
+  font-family: ${(props) => props.theme.fonts.fontsFamily};
   ${textVariants}
   ${spacing}
 `;

@@ -1,4 +1,3 @@
-import "./text-style.css";
 import { StyledText } from "./text-styled";
 
 export const defaultVariantMapping = {
