@@ -1,8 +1,9 @@
-import "./logo-style.css";
+import { StyledLogo } from "./logo-styled";
+import { Text } from "../text/text";
 
 export const Logo = () => {
   return (
-    <a href="TODO" className="logo">
+    <StyledLogo href="TODO">
       <svg
         width="44"
         height="44"
@@ -90,7 +91,9 @@ export const Logo = () => {
           </clipPath>
         </defs>
       </svg>
-      <span className="logo__title">Фермерские продукты</span>
-    </a>
+      <Text variant="logo" ml="24px">
+        Фермерские продукты
+      </Text>
+    </StyledLogo>
   );
 };

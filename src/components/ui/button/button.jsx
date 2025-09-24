@@ -1,5 +1,5 @@
-import "./button-style.css";
+import { StyledButton } from "./button-styled";
 
 export const Button = ({ children }) => {
-  return <button className="button">{children}</button>;
+  return <StyledButton>{children}</StyledButton>;
 };

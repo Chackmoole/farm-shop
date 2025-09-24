@@ -1,26 +1,24 @@
-import "./features-card-style.css";
-import { Text, TextVariant } from "../../../ui/text/text";
+import { Text } from "../../../ui/text/text";
+import {
+  StyledFeaturesCard,
+  StyledFeaturesCardBox,
+  StyledFeaturesCardInner,
+  StyledFeaturesCardTitle,
+} from "./features-card-styled";
 
 export const FeaturesCard = ({ title, description, subtitle, img, isFarm }) => {
-  let featuresCardClass = isFarm
-    ? "features-card"
-    : "features-card features-card--shop";
-  let featuresSubheddingClass = isFarm
-    ? "features-card__subheading"
-    : "features-card__subheading features-card__subheading--shop";
-
   return (
-    <li className={featuresCardClass}>
-      <div className="features-card__box">
+    <StyledFeaturesCard $isFarm={isFarm}>
+      <StyledFeaturesCardBox>
         <img src={img} alt="" width={52} height={52} />
-        <div className="features-card__inner">
-          <Text variant={TextVariant.small} className={featuresSubheddingClass}>
+        <StyledFeaturesCardInner>
+          <StyledFeaturesCardTitle $isFarm={isFarm} variant="caption1">
             {subtitle}
-          </Text>
-          <Text variant={TextVariant.bold}>{title}</Text>
-        </div>
-      </div>
-      <Text variant={TextVariant.normal}>{description}</Text>
-    </li>
+          </StyledFeaturesCardTitle>
+          <Text variant="body2">{title}</Text>
+        </StyledFeaturesCardInner>
+      </StyledFeaturesCardBox>
+      <Text>{description}</Text>
+    </StyledFeaturesCard>
   );
 };

@@ -1,13 +1,13 @@
-import "./layout-style.css";
 import { Header } from "./header/header";
 import { Footer } from "./footer/footer";
+import { StyledLayout } from "./layout-styled";
 
 export const Layout = ({ children }) => {
   return (
-    <div className="layout">
+    <StyledLayout>
       <Header />
       {children}
       <Footer />
-    </div>
+    </StyledLayout>
   );
 };

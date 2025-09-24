@@ -1,15 +1,13 @@
-.features {
+import styled from "styled-components";
+
+export const StyledFeatures = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 100px 0;
-}
+`;
 
-.features__title {
-  margin-bottom: 64px;
-}
-
-.features__list {
+export const StyledFeaturesList = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -17,4 +15,4 @@
   list-style-type: none;
   margin: 0 0 64px;
   padding: 0;
-}
+`;
