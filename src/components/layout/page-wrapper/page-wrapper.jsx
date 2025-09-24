@@ -1,5 +1,5 @@
-import "./page-wrapper-style.css";
+import { StyledPageWrapper } from "./page-wrapper-styled";
 
-export const PageWrapper = ({ children, className = "" }) => {
-  return <div className={`page-wrapper ${className}`}>{children}</div>;
+export const PageWrapper = ({ children }) => {
+  return <StyledPageWrapper>{children}</StyledPageWrapper>;
 };
