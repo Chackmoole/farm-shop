@@ -1,18 +1,18 @@
 import { FeaturesCard } from "./features-card/features-card";
 import { PageWrapper } from "../../layout/page-wrapper/page-wrapper";
-import { Title, TitleVariants } from "../../ui/title/title";
 import { Button } from "../../ui/button/button";
-import "./features-style.css";
 import { FEATURES_CARDS } from "../../../mock/features-cards";
+import { StyledFeatures, StyledFeaturesList } from "./features-styled";
+import { Text } from "../../ui/text/text";
 
 export const Features = () => {
   return (
     <PageWrapper>
-      <section className="features">
-        <Title variant={TitleVariants.h2} className="features__title">
+      <StyledFeatures>
+        <Text variant="h2" mb="64px">
           Почему фермерские продукты лучше?
-        </Title>
-        <ul className="features__list">
+        </Text>
+        <StyledFeaturesList>
           {FEATURES_CARDS.map((card) => (
             <FeaturesCard
               key={card.id}
@@ -23,9 +23,9 @@ export const Features = () => {
               isFarm={card.isFarm}
             />
           ))}
-        </ul>
+        </StyledFeaturesList>
         <Button>Купить</Button>
-      </section>
+      </StyledFeatures>
     </PageWrapper>
   );
 };
