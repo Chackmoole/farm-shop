@@ -3,13 +3,13 @@ import { PageWrapper } from "../../layout/page-wrapper/page-wrapper";
 import { Button } from "../../ui/button/button";
 import { FEATURES_CARDS } from "../../../mock/features-cards";
 import { StyledFeatures, StyledFeaturesList } from "./features-styled";
-import { defaultVariantMapping, Text } from "../../ui/text/text";
+import { Text } from "../../ui/text/text";
 
 export const Features = () => {
   return (
     <PageWrapper>
       <StyledFeatures>
-        <Text variant={defaultVariantMapping.h2} mb="64px">
+        <Text variant="h2" mb="64px">
           Почему фермерские продукты лучше?
         </Text>
         <StyledFeaturesList>

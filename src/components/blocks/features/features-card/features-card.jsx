@@ -1,4 +1,4 @@
-import { defaultVariantMapping, Text } from "../../../ui/text/text";
+import { Text } from "../../../ui/text/text";
 import {
   StyledFeaturesCard,
   StyledFeaturesCardBox,
@@ -15,7 +15,7 @@ export const FeaturesCard = ({ title, description, subtitle, img, isFarm }) => {
           <StyledFeaturesCardTitle $isFarm={isFarm} variant="caption1">
             {subtitle}
           </StyledFeaturesCardTitle>
-          <Text variant={defaultVariantMapping.body2}>{title}</Text>
+          <Text variant="body2">{title}</Text>
         </StyledFeaturesCardInner>
       </StyledFeaturesCardBox>
       <Text>{description}</Text>

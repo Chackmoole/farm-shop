@@ -1,5 +1,5 @@
 import { StyledLogo } from "./logo-styled";
-import { defaultVariantMapping, Text } from "../text/text";
+import { Text } from "../text/text";
 
 export const Logo = () => {
   return (
@@ -91,7 +91,7 @@ export const Logo = () => {
           </clipPath>
         </defs>
       </svg>
-      <Text variant={defaultVariantMapping.logo} ml="24px">
+      <Text variant="logo" ml="24px">
         Фермерские продукты
       </Text>
     </StyledLogo>
