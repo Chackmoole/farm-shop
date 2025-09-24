@@ -51,6 +51,12 @@ export const textVariants = css`
           line-height: 130%;
           font-weight: 700;
         `;
+      case "logo":
+        return css`
+          font-size: 28px;
+          line-height: 115%;
+          font-weight: 700;
+        `;
       default:
         return css`
           font-size: 18px;
