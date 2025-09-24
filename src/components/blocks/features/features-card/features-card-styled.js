@@ -23,7 +23,6 @@ export const StyledFeaturesCardBox = styled.div`
 `;
 
 export const StyledFeaturesCardTitle = styled(Text)`
-  ${(props) => console.log(props)}
   ${(props) => {
     return props.$isFarm
       ? css`
