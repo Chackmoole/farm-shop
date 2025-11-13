@@ -21,6 +21,12 @@ export const textVariants = css`
           line-height: 115%;
           font-weight: 700;
         `;
+      case "h4":
+        return css`
+          font-size: 24px;
+          line-height: 115%;
+          font-weight: 700;
+        `;
       case "subtitle":
         return css`
           font-size: 24px;
