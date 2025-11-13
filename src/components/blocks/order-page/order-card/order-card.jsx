@@ -4,19 +4,17 @@ import {
   StyledOrderCardTab,
   StyledOrderCardTabs,
 } from "./order-card-styled";
-import chicken from "../../../../assets/img/products/chicken.jpg";
 import { Text } from "../../../ui/text/text";
 import { useState } from "react";
 
-export const OrderCard = () => {
+export const OrderCard = ({ title, description, image }) => {
   const [activeTab, setActiveTab] = useState("description");
-
   return (
     <StyledOrderCard>
-      <img src={chicken} alt="" width={248} height={248} />
+      <img src={image} alt="" width={248} height={248} />
       <StyledOrderCardBox>
         <Text variant="h4" mb="16px">
-          Филе бедра цыпленка
+          {title}
         </Text>
         <StyledOrderCardTabs>
           <StyledOrderCardTab
@@ -38,6 +36,7 @@ export const OrderCard = () => {
             <Text variant="caption1">Свойства</Text>
           </StyledOrderCardTab>
         </StyledOrderCardTabs>
+        {activeTab === "description" ? <Text>{description}</Text> : null}
       </StyledOrderCardBox>
     </StyledOrderCard>
   );
