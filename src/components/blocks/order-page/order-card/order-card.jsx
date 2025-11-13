@@ -3,14 +3,13 @@ import {
   StyledOrderCardBox,
   StyledOrderCardTab,
   StyledOrderCardTabs,
-  StyledOrderCardTabText,
 } from "./order-card-styled";
 import chicken from "../../../../assets/img/products/chicken.jpg";
 import { Text } from "../../../ui/text/text";
 import { useState } from "react";
 
 export const OrderCard = () => {
-  const [isActive, setActive] = useState(true);
+  const [activeTab, setActiveTab] = useState("description");
 
   return (
     <StyledOrderCard>
@@ -20,20 +19,23 @@ export const OrderCard = () => {
           Филе бедра цыпленка
         </Text>
         <StyledOrderCardTabs>
-          <StyledOrderCardTab $isActive={isActive}>
-            <StyledOrderCardTabText variant="caption1">
-              Описание
-            </StyledOrderCardTabText>
+          <StyledOrderCardTab
+            $isActiveTab={activeTab === "description"}
+            onClick={() => setActiveTab("description")}
+          >
+            <Text variant="caption1">Описание</Text>
           </StyledOrderCardTab>
-          <StyledOrderCardTab>
-            <StyledOrderCardTabText variant="caption1">
-              Характеристики
-            </StyledOrderCardTabText>
+          <StyledOrderCardTab
+            $isActiveTab={activeTab === "characteristics"}
+            onClick={() => setActiveTab("characteristics")}
+          >
+            <Text variant="caption1">Характеристики</Text>
           </StyledOrderCardTab>
-          <StyledOrderCardTab>
-            <StyledOrderCardTabText variant="caption1">
-              Свойства
-            </StyledOrderCardTabText>
+          <StyledOrderCardTab
+            $isActiveTab={activeTab === "properties"}
+            onClick={() => setActiveTab("properties")}
+          >
+            <Text variant="caption1">Свойства</Text>
           </StyledOrderCardTab>
         </StyledOrderCardTabs>
       </StyledOrderCardBox>

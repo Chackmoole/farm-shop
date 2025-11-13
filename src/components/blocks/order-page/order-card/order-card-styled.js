@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Text } from "../../../ui/text/text";
 
 export const StyledOrderCard = styled.div`
   display: flex;
@@ -15,14 +14,15 @@ export const StyledOrderCardTabs = styled.div`
 `;
 
 export const StyledOrderCardTab = styled.div`
-  padding: 8px 12px;
   background-color: ${(props) =>
-    props.$isActive
+    props.$isActiveTab
       ? props.theme.colors.colorGreen
       : props.theme.colors.colorGray};
-
-  color: ${(props) => props.theme.colors.colorBlackText};
+  color: ${(props) =>
+    props.$isActiveTab
+      ? props.theme.colors.colorWhite
+      : props.theme.colors.colorBlackText};
+  padding: 8px 12px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  cursor: pointer;
 `;
-
-export const StyledOrderCardTabText = styled(Text)``;
