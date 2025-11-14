@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Text } from "../../../ui/text/text";
 
 export const StyledOrderCard = styled.div`
   display: flex;
@@ -32,4 +33,9 @@ export const StyledOrderCardTab = styled.div`
 
 export const StyledOrderCardWrapper = styled.div`
   margin-bottom: 14px;
+`;
+
+export const StyledOrderCardPrice = styled(Text)`
+  background-color: ${(porps) => porps.theme.colors.colorLightBlue};
+  padding: 4px 8px;
 `;

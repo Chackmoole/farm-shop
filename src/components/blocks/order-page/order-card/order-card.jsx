@@ -4,10 +4,10 @@ import {
   StyledOrderCardTab,
   StyledOrderCardTabs,
   StyledOrderCardWrapper,
+  StyledOrderCardPrice,
 } from "./order-card-styled";
 import { Text } from "../../../ui/text/text";
 import { useState } from "react";
-import { StyledPricePlate } from "../../../ui/price-plate/price-plate-styled";
 
 export const OrderCard = ({ title, description, image, priceText }) => {
   const [activeTab, setActiveTab] = useState("description");
@@ -43,9 +43,9 @@ export const OrderCard = ({ title, description, image, priceText }) => {
             <Text variant="caption1">{description}</Text>
           ) : null}
         </StyledOrderCardWrapper>
-        <StyledPricePlate>
-          <Text variant="caption2">{priceText}</Text>
-        </StyledPricePlate>
+        <StyledOrderCardPrice variant="caption2">
+          {priceText}
+        </StyledOrderCardPrice>
       </StyledOrderCardBox>
     </StyledOrderCard>
   );
