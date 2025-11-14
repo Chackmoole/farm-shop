@@ -1,19 +1,31 @@
-import { StyledOrderPage } from "./order-page-styled";
+import {
+  StyledOrderCardWrapper,
+  StyledOrderPage,
+  StyledOrderPageBox,
+} from "./order-page-styled";
 import { OrderCard } from "./order-card/order-card";
 import { products } from "../../../mock/products-data";
+import { PageWrapper } from "../../layout/page-wrapper/page-wrapper";
+import { OrderFilter } from "./order-filter/order-filter";
 
 export const OrderPage = () => {
-  console.log(products[0].name);
   return (
     <StyledOrderPage>
-      {products.map((item) => (
-        <OrderCard
-          key={item.id}
-          title={item.name}
-          description={item.description}
-          image={item.image}
-        />
-      ))}
+      <PageWrapper>
+        <StyledOrderPageBox>
+          <OrderFilter />
+          <StyledOrderCardWrapper>
+            {products.map((item) => (
+              <OrderCard
+                key={item.id}
+                title={item.name}
+                description={item.description}
+                image={item.image}
+              />
+            ))}
+          </StyledOrderCardWrapper>
+        </StyledOrderPageBox>
+      </PageWrapper>
     </StyledOrderPage>
   );
 };

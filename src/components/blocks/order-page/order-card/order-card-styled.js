@@ -4,6 +4,8 @@ export const StyledOrderCard = styled.div`
   display: flex;
   padding: 20px;
   gap: 20px;
+  width: 727px;
+  background: ${(props) => props.theme.colors.colorWhite};
 `;
 
 export const StyledOrderCardBox = styled.div``;
@@ -11,6 +13,7 @@ export const StyledOrderCardBox = styled.div``;
 export const StyledOrderCardTabs = styled.div`
   display: flex;
   gap: 8px;
+  margin-bottom: 16px;
 `;
 
 export const StyledOrderCardTab = styled.div`

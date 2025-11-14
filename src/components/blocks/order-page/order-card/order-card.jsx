@@ -36,7 +36,9 @@ export const OrderCard = ({ title, description, image }) => {
             <Text variant="caption1">Свойства</Text>
           </StyledOrderCardTab>
         </StyledOrderCardTabs>
-        {activeTab === "description" ? <Text>{description}</Text> : null}
+        {activeTab === "description" ? (
+          <Text variant="caption1">{description}</Text>
+        ) : null}
       </StyledOrderCardBox>
     </StyledOrderCard>
   );
