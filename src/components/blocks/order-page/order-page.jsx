@@ -21,6 +21,7 @@ export const OrderPage = () => {
                 title={item.name}
                 description={item.description}
                 image={item.image}
+                priceText={item.priceText}
               />
             ))}
           </StyledOrderCardWrapper>

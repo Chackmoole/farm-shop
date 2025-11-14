@@ -16,8 +16,6 @@ export const products = [
       beforeDate: "6 суток",
       breed: "КОББ 500",
       place: "Тверская область",
-      price: "400",
-      priceText: "400 руб. / 700 гр",
     },
     Properties: {
       id: 2,
@@ -25,6 +23,8 @@ export const products = [
       Nutritional: "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
     image: chicken,
+    price: "400",
+    priceText: "400 руб. / 700 гр",
   },
 
   {
@@ -38,8 +38,6 @@ export const products = [
       beforeDate: "180 суток",
       breed: "КОББ 200",
       place: "Воронежская область",
-      price: "1479",
-      priceText: "1479 руб. / 800 гр",
     },
     Properties: {
       id: 2,
@@ -48,6 +46,8 @@ export const products = [
         "белки - 18,6 г., жиры - 4,61 г., углеводы - 0 г.; на 100 г.",
     },
     image: steak,
+    price: "1479",
+    priceText: "1479 руб. / 800 гр",
   },
 
   {
@@ -61,8 +61,6 @@ export const products = [
       beforeDate: "180 суток",
       breed: "КОББ 700",
       place: "Москва",
-      price: "560",
-      priceText: "560 руб. / 500 гр",
     },
     Properties: {
       id: 2,
@@ -71,6 +69,8 @@ export const products = [
         "белки - 18,6 г., жиры - 20,0 г., углеводы - 0 г.; на 100 г.",
     },
     image: forcemeat,
+    price: "560",
+    priceText: "560 руб. / 500 гр",
   },
 
   {
@@ -84,8 +84,6 @@ export const products = [
       beforeDate: "180 сут.",
       breed: "КОББ 2000",
       place: "Ставрополье",
-      price: "6998",
-      priceText: "6998 руб. / 2 кг",
     },
     Properties: {
       id: 2,
@@ -94,6 +92,8 @@ export const products = [
         "белки - 15,6 г., жиры - 16,3 г., углеводы - 0 г.; на 100 г.",
     },
     image: loin,
+    price: "6998",
+    priceText: "6998 руб. / 2 кг",
   },
 
   {
@@ -107,8 +107,6 @@ export const products = [
       beforeDate: "180 суток",
       breed: "Star-53",
       place: "Тверская область",
-      price: "2536",
-      priceText: "2536 руб. / 2 кг",
     },
     Properties: {
       id: 2,
@@ -117,5 +115,7 @@ export const products = [
         "белки - 13,5 г., жиры - 28,6 г., углеводы - 0,94 г.; на 100 г.",
     },
     image: duck,
+    price: "2536",
+    priceText: "2536 руб. / 2 кг",
   },
 ];

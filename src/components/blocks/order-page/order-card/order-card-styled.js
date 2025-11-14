@@ -29,3 +29,7 @@ export const StyledOrderCardTab = styled.div`
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   cursor: pointer;
 `;
+
+export const StyledOrderCardWrapper = styled.div`
+  margin-bottom: 14px;
+`;
