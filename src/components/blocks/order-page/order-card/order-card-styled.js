@@ -9,6 +9,10 @@ export const StyledOrderCard = styled.div`
   background: ${(props) => props.theme.colors.colorWhite};
 `;
 
+export const StyledOrderCardImg = styled.img`
+  object-fit: cover;
+`;
+
 export const StyledOrderCardBox = styled.div``;
 
 export const StyledOrderCardTabs = styled.div`

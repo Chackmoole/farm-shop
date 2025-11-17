@@ -5,6 +5,7 @@ import {
   StyledOrderCardTabs,
   StyledOrderCardWrapper,
   StyledOrderCardPrice,
+  StyledOrderCardImg,
 } from "./order-card-styled";
 import { Text } from "../../../ui/text/text";
 import { useState } from "react";
@@ -22,7 +23,7 @@ export const OrderCard = ({
   const [activeTab, setActiveTab] = useState("description");
   return (
     <StyledOrderCard>
-      <img src={image} alt="" width={248} height={248} />
+      <StyledOrderCardImg src={image} alt="" width={248} height={248} />
       <StyledOrderCardBox>
         <Text variant="h4" mb="16px">
           {title}
@@ -62,7 +63,10 @@ export const OrderCard = ({
           {activeTab === "properties" ? (
             <OrderProperties
               energy={properties.energy}
-              nutritional={properties.nutritional}
+              energyUnit={properties.energyUnit}
+              proteins={properties.nutritional.proteins}
+              fats={properties.nutritional.fats}
+              carbohydrates={properties.nutritional.carbohydrates}
             />
           ) : null}
         </StyledOrderCardWrapper>

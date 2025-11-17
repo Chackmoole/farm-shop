@@ -19,8 +19,10 @@ export const products = [
     },
     properties: {
       id: 2,
-      energy: "135 ккал./565 кДж.",
-      nutritional: "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
+      energy: "135",
+      energyUnit: "565",
+      // nutritional: "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
+      nutritional: { proteins: "13,8", fats: "8,7", carbohydrates: "0" },
     },
     image: chicken,
     price: "400",
@@ -41,9 +43,11 @@ export const products = [
     },
     properties: {
       id: 2,
-      energy: "131 ккал. / 548 кДж.",
-      nutritional:
-        "белки - 18,6 г., жиры - 4,61 г., углеводы - 0 г.; на 100 г.",
+      energy: "131",
+      energyUit: "548",
+      // nutritional:
+      //   "белки - 18,6 г., жиры - 4,61 г., углеводы - 0 г.; на 100 г.",
+      nutritional: { proteins: "18,6", fats: "4,61", carbohydrates: "0" },
     },
     image: steak,
     price: "1479",
@@ -64,9 +68,11 @@ export const products = [
     },
     properties: {
       id: 2,
-      energy: "131 ккал. / 548 кДж.",
-      nutritional:
-        "белки - 18,6 г., жиры - 20,0 г., углеводы - 0 г.; на 100 г.",
+      energy: "131",
+      energyUnit: "548",
+      // nutritional:
+      //   "белки - 18,6 г., жиры - 20,0 г., углеводы - 0 г.; на 100 г.",
+      nutritional: { proteins: "18,6", fats: "20,0", carbohydrates: "0" },
     },
     image: forcemeat,
     price: "560",
@@ -87,9 +93,11 @@ export const products = [
     },
     properties: {
       id: 2,
-      energy: "209 кКал. / 874,45 кДж.",
-      nutritional:
-        "белки - 15,6 г., жиры - 16,3 г., углеводы - 0 г.; на 100 г.",
+      energy: "209",
+      energyUnit: "874,45",
+      // nutritional:
+      //   "белки - 15,6 г., жиры - 16,3 г., углеводы - 0 г.; на 100 г.",
+      nutritional: { proteins: "15,6", fats: "16,3", carbohydrates: "0" },
     },
     image: loin,
     price: "6998",
@@ -110,9 +118,11 @@ export const products = [
     },
     properties: {
       id: 2,
-      energy: "215 ккал. / 899,58 кДж.",
-      nutritional:
-        "белки - 13,5 г., жиры - 28,6 г., углеводы - 0,94 г.; на 100 г.",
+      energy: "215",
+      energyUnit: "899,58",
+      // nutritional:
+      //   "белки - 13,5 г., жиры - 28,6 г., углеводы - 0,94 г.; на 100 г.",
+      nutritional: { proteins: "13,5", fats: "28,6", carbohydrates: "0" },
     },
     image: duck,
     price: "2536",
