@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCardCharacteristics = styled.ul`
+export const StyledOrderCharacteristics = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -8,6 +8,6 @@ export const StyledCardCharacteristics = styled.ul`
   padding: 0;
 `;
 
-export const StyledCardCharacteristicsItem = styled.li`
+export const StyledOrderCharacteristicsItem = styled.li`
   list-style: none;
 `;

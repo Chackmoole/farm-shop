@@ -8,7 +8,7 @@ import {
 } from "./order-card-styled";
 import { Text } from "../../../ui/text/text";
 import { useState } from "react";
-import { CardCharacteristics } from "../order-characteristics/card-characteristics";
+import { OrderCharacteristics } from "../order-characteristics/order-characteristics";
 
 export const OrderCard = ({
   title,
@@ -50,7 +50,7 @@ export const OrderCard = ({
             <Text variant="caption1">{description}</Text>
           ) : null}
           {activeTab === "characteristics" ? (
-            <CardCharacteristics
+            <OrderCharacteristics
               weight={characteristics.weight}
               beforeDate={characteristics.beforeDate}
               breed={characteristics.breed}
