@@ -20,7 +20,7 @@ export const products = [
     properties: {
       id: 2,
       energy: "135 ккал./565 кДж.",
-      Nutritional: "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
+      nutritional: "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
     image: chicken,
     price: "400",
@@ -42,7 +42,7 @@ export const products = [
     properties: {
       id: 2,
       energy: "131 ккал. / 548 кДж.",
-      Nutritional:
+      nutritional:
         "белки - 18,6 г., жиры - 4,61 г., углеводы - 0 г.; на 100 г.",
     },
     image: steak,
@@ -65,7 +65,7 @@ export const products = [
     properties: {
       id: 2,
       energy: "131 ккал. / 548 кДж.",
-      Nutritional:
+      nutritional:
         "белки - 18,6 г., жиры - 20,0 г., углеводы - 0 г.; на 100 г.",
     },
     image: forcemeat,
@@ -88,7 +88,7 @@ export const products = [
     properties: {
       id: 2,
       energy: "209 кКал. / 874,45 кДж.",
-      Nutritional:
+      nutritional:
         "белки - 15,6 г., жиры - 16,3 г., углеводы - 0 г.; на 100 г.",
     },
     image: loin,
@@ -111,7 +111,7 @@ export const products = [
     properties: {
       id: 2,
       energy: "215 ккал. / 899,58 кДж.",
-      Nutritional:
+      nutritional:
         "белки - 13,5 г., жиры - 28,6 г., углеводы - 0,94 г.; на 100 г.",
     },
     image: duck,

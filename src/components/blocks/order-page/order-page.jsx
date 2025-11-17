@@ -23,6 +23,7 @@ export const OrderPage = () => {
                 image={item.image}
                 priceText={item.priceText}
                 characteristics={item.characteristics}
+                properties={item.properties}
               />
             ))}
           </StyledOrderCardWrapper>

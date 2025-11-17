@@ -9,12 +9,14 @@ import {
 import { Text } from "../../../ui/text/text";
 import { useState } from "react";
 import { OrderCharacteristics } from "../order-characteristics/order-characteristics";
+import { OrderProperties } from "../order-properties/order-properties";
 
 export const OrderCard = ({
   title,
   description,
   image,
   priceText,
+  properties,
   characteristics,
 }) => {
   const [activeTab, setActiveTab] = useState("description");
@@ -55,6 +57,12 @@ export const OrderCard = ({
               beforeDate={characteristics.beforeDate}
               breed={characteristics.breed}
               place={characteristics.place}
+            />
+          ) : null}
+          {activeTab === "properties" ? (
+            <OrderProperties
+              energy={properties.energy}
+              nutritional={properties.nutritional}
             />
           ) : null}
         </StyledOrderCardWrapper>
