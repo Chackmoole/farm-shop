@@ -8,8 +8,15 @@ import {
 } from "./order-card-styled";
 import { Text } from "../../../ui/text/text";
 import { useState } from "react";
+import { CardCharacteristics } from "../order-characteristics/card-characteristics";
 
-export const OrderCard = ({ title, description, image, priceText }) => {
+export const OrderCard = ({
+  title,
+  description,
+  image,
+  priceText,
+  characteristics,
+}) => {
   const [activeTab, setActiveTab] = useState("description");
   return (
     <StyledOrderCard>
@@ -41,6 +48,14 @@ export const OrderCard = ({ title, description, image, priceText }) => {
         <StyledOrderCardWrapper>
           {activeTab === "description" ? (
             <Text variant="caption1">{description}</Text>
+          ) : null}
+          {activeTab === "characteristics" ? (
+            <CardCharacteristics
+              weight={characteristics.weight}
+              beforeDate={characteristics.beforeDate}
+              breed={characteristics.breed}
+              place={characteristics.place}
+            />
           ) : null}
         </StyledOrderCardWrapper>
         <StyledOrderCardPrice variant="caption2">
