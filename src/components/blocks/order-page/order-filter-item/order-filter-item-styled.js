@@ -22,10 +22,9 @@ export const StyledOrderFilterItemLabel = styled.label`
     background-color: ${(props) => props.theme.colors.colorOrange};
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   }
-
   &::after {
     position: absolute;
-    content: url("${mark}");
+    content: url(${(props) => (props.$isChecked ? mark : "")});
     top: 47%;
     transform: translateY(-50%);
     right: 4px;

@@ -1,14 +1,15 @@
-import {
-  StyledOrderFilterItem,
-  StyledOrderFilterItemInput,
-  StyledOrderFilterItemLabel,
-} from "./order-filter-item-styled";
 import { Text } from "../../../ui/text/text";
 
-export const OrderFilterItem = ({ name }) => {
+import {
+  StyledOrderFilterItem,
+  StyledOrderFilterItemLabel,
+  StyledOrderFilterItemInput,
+} from "./order-filter-item-styled";
+
+export const OrderFilterItem = ({ name, onChange, isChecked }) => {
   return (
     <StyledOrderFilterItem>
-      <StyledOrderFilterItemLabel>
+      <StyledOrderFilterItemLabel onChange={onChange} $isChecked={isChecked}>
         <Text variant="body1">{name}</Text>
 
         <StyledOrderFilterItemInput type="checkbox" />

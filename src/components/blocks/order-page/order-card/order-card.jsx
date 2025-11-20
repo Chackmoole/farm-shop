@@ -31,7 +31,9 @@ export const OrderCard = ({
         <StyledOrderCardTabs>
           <StyledOrderCardTab
             $isActiveTab={activeTab === "description"}
-            onClick={() => setActiveTab("description")}
+            onClick={() => {
+              setActiveTab("description");
+            }}
           >
             <Text variant="caption1">Описание</Text>
           </StyledOrderCardTab>
