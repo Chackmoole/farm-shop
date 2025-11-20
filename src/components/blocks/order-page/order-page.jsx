@@ -6,12 +6,11 @@ import {
 import { OrderCard } from "./order-card/order-card";
 import { products } from "../../../mock/products-data";
 import { PageWrapper } from "../../layout/page-wrapper/page-wrapper";
-import { OrderFilter } from "./order-filter/order-filter";
-import { OrderFilterItem } from "./order-filter-item/order-filter-item";
 import { useState } from "react";
+import { OrderPurchaseForm } from "./order-purchase-form/order-purchase-form";
 
 export const OrderPage = () => {
-  const [activeProducts, setActiveProducts] = useState([]);
+  const [activeProducts, setActiveProducts] = useState([1, 2]);
 
   const addProduct = (idProduct) => {
     setActiveProducts((prevState) => {
@@ -37,20 +36,10 @@ export const OrderPage = () => {
     <StyledOrderPage>
       <PageWrapper>
         <StyledOrderPageBox>
-          <OrderFilter>
-            {products.map((product) => {
-              return (
-                <OrderFilterItem
-                  key={product.id}
-                  name={product.name}
-                  onChange={() => {
-                    handelOnFilterChange(product.id);
-                  }}
-                  isChecked={activeProducts.includes(product.id)}
-                />
-              );
-            })}
-          </OrderFilter>
+          <OrderPurchaseForm
+            handelOnFilterChange={handelOnFilterChange}
+            activeProducts={activeProducts}
+          />
           <StyledOrderCardWrapper>
             {products.map((item) => (
               <OrderCard
