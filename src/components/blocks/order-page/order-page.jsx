@@ -8,9 +8,10 @@ import { products } from "../../../mock/products-data";
 import { PageWrapper } from "../../layout/page-wrapper/page-wrapper";
 import { useState } from "react";
 import { OrderPurchaseForm } from "./order-purchase-form/order-purchase-form";
+import { OrderNoData } from "./order-no-data/order-no-data";
 
 export const OrderPage = () => {
-  const [activeProducts, setActiveProducts] = useState([1, 3]);
+  const [activeProducts, setActiveProducts] = useState([]);
 
   const getFullPrice = () => {
     let fullPrice = 0;
@@ -55,17 +56,21 @@ export const OrderPage = () => {
             price={getFullPrice()}
           />
           <StyledOrderCardWrapper>
-            {products.map((item) => (
-              <OrderCard
-                key={item.id}
-                title={item.name}
-                description={item.description}
-                image={item.image}
-                priceText={item.priceText}
-                characteristics={item.characteristics}
-                properties={item.properties}
-              />
-            ))}
+            {products.length > 0 ? (
+              products.map((item) => (
+                <OrderCard
+                  key={item.id}
+                  title={item.name}
+                  description={item.description}
+                  image={item.image}
+                  priceText={item.priceText}
+                  characteristics={item.characteristics}
+                  properties={item.properties}
+                />
+              ))
+            ) : (
+              <OrderNoData />
+            )}
           </StyledOrderCardWrapper>
         </StyledOrderPageBox>
       </PageWrapper>
