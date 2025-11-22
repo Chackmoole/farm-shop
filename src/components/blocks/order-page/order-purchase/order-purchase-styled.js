@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../../../ui/button/button";
 
 export const StyledOrderPurchase = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ export const StyledOrderPurchase = styled.div`
   background-color: ${(props) => props.theme.colors.colorWhite};
 `;
 
-export const StyledOrderAdressInput = styled.input`
+export const StyledOrderAddressInput = styled.input`
   min-height: 48px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
   border: none;
@@ -22,5 +23,17 @@ export const StyledOrderAdressInput = styled.input`
     line-height: 130%;
     font-weight: 400;
     color: ${(props) => props.theme.colors.colorBlackText};
+  }
+`;
+
+export const StyledOrderOrderBuyButton = styled(Button)`
+  &:disabled {
+    background-color: ${(props) => props.theme.colors.colorGray};
+    color: ${(props) => props.theme.colors.colorBlackText};
+    opacity: 50%;
+    box-shadow: none;
+    cursor: not-allowed;
+    
+    &:hover {
   }
 `;

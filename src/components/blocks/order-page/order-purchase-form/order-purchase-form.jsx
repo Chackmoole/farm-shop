@@ -9,6 +9,8 @@ export const OrderPurchaseForm = ({
   activeProducts,
   price,
 }) => {
+  const isAvailable = activeProducts.length > 0;
+
   return (
     <StyledOrderPurchaseForm>
       <OrderFilter>
@@ -25,7 +27,7 @@ export const OrderPurchaseForm = ({
           );
         })}
       </OrderFilter>
-      <OrderPurchase price={price} />
+      <OrderPurchase price={price} isAvailable={isAvailable} />
     </StyledOrderPurchaseForm>
   );
 };
