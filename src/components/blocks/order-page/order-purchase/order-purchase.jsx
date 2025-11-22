@@ -5,7 +5,7 @@ import {
 import { Text } from "../../../ui/text/text";
 import { Button } from "../../../ui/button/button";
 
-export const OrderPurchase = () => {
+export const OrderPurchase = ({ price }) => {
   return (
     <StyledOrderPurchase>
       <Text variant="body2" mb="24px">
@@ -16,7 +16,7 @@ export const OrderPurchase = () => {
         Цена
       </Text>
       <Text variant="h4" mb="32px">
-        1 200 руб.
+        {price} руб.
       </Text>
       <Button>Купить</Button>
     </StyledOrderPurchase>

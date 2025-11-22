@@ -10,7 +10,20 @@ import { useState } from "react";
 import { OrderPurchaseForm } from "./order-purchase-form/order-purchase-form";
 
 export const OrderPage = () => {
-  const [activeProducts, setActiveProducts] = useState([1, 2]);
+  const [activeProducts, setActiveProducts] = useState([1, 3]);
+
+  const getFullPrice = () => {
+    let fullPrice = 0;
+
+    products.forEach((element) => {
+      activeProducts.forEach((item) => {
+        if (element.id === item) {
+          fullPrice = fullPrice + Number(element.price);
+        }
+      });
+    });
+    return fullPrice;
+  };
 
   const addProduct = (idProduct) => {
     setActiveProducts((prevState) => {
@@ -39,6 +52,7 @@ export const OrderPage = () => {
           <OrderPurchaseForm
             handelOnFilterChange={handelOnFilterChange}
             activeProducts={activeProducts}
+            price={getFullPrice()}
           />
           <StyledOrderCardWrapper>
             {products.map((item) => (

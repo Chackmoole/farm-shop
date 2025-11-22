@@ -4,7 +4,11 @@ import { products } from "../../../../mock/products-data";
 import { OrderFilterItem } from "../order-filter-item/order-filter-item";
 import { OrderPurchase } from "../order-purchase/order-purchase";
 
-export const OrderPurchaseForm = ({ handelOnFilterChange, activeProducts }) => {
+export const OrderPurchaseForm = ({
+  handelOnFilterChange,
+  activeProducts,
+  price,
+}) => {
   return (
     <StyledOrderPurchaseForm>
       <OrderFilter>
@@ -21,7 +25,7 @@ export const OrderPurchaseForm = ({ handelOnFilterChange, activeProducts }) => {
           );
         })}
       </OrderFilter>
-      <OrderPurchase />
+      <OrderPurchase price={price} />
     </StyledOrderPurchaseForm>
   );
 };
