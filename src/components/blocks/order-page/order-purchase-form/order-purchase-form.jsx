@@ -10,8 +10,6 @@ export const OrderPurchaseForm = ({
   activeProducts,
   price,
 }) => {
-  const isAvailable = activeProducts.length > 0;
-
   const [address, setAddress] = useState("");
   const handleOnChange = (e) => {
     setAddress(e.target.value);
@@ -24,6 +22,9 @@ export const OrderPurchaseForm = ({
     );
     setAddress("");
   };
+
+  const isAvailable = activeProducts.length > 0 && address;
+
   return (
     <StyledOrderPurchaseForm>
       <OrderFilter>
