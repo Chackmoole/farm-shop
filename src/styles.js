@@ -32,4 +32,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+  *
+  {box-sizing: border-box;}
+
 `;
