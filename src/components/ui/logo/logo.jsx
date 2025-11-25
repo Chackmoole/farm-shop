@@ -3,7 +3,7 @@ import { Text } from "../text/text";
 
 export const Logo = () => {
   return (
-    <StyledLogo href="TODO">
+    <StyledLogo to={"/"}>
       <svg
         width="44"
         height="44"
