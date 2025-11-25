@@ -3,12 +3,12 @@ import {
   StyledOrderPage,
   StyledOrderPageBox,
 } from "./order-page-styled";
-import { OrderCard } from "./order-card/order-card";
+import { OrderCard } from "../../blocks/order/order-card/order-card";
 import { products } from "../../../mock/products-data";
 import { PageWrapper } from "../../layout/page-wrapper/page-wrapper";
 import { useState } from "react";
-import { OrderPurchaseForm } from "./order-purchase-form/order-purchase-form";
-import { OrderNoData } from "./order-no-data/order-no-data";
+import { OrderPurchaseForm } from "../../blocks/order/order-purchase-form/order-purchase-form";
+import { OrderNoData } from "../../blocks/order/order-no-data/order-no-data";
 import { Layout } from "../../layout/layout";
 
 export const OrderPage = () => {

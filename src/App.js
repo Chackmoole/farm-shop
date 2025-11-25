@@ -1,6 +1,6 @@
 import { MainPage } from "./components/pages/main-page/main-page";
 import { BrowserRouter, Route, Routes } from "react-router";
-import { OrderPage } from "./components/blocks/order-page/order-page";
+import { OrderPage } from "./components/pages/order-page/order-page";
 
 function App() {
   return (
