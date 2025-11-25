@@ -9,6 +9,7 @@ import { PageWrapper } from "../../layout/page-wrapper/page-wrapper";
 import { useState } from "react";
 import { OrderPurchaseForm } from "./order-purchase-form/order-purchase-form";
 import { OrderNoData } from "./order-no-data/order-no-data";
+import { Layout } from "../../layout/layout";
 
 export const OrderPage = () => {
   const [activeProducts, setActiveProducts] = useState([]);
@@ -47,33 +48,35 @@ export const OrderPage = () => {
   };
 
   return (
-    <StyledOrderPage>
-      <PageWrapper>
-        <StyledOrderPageBox>
-          <OrderPurchaseForm
-            handelOnFilterChange={handelOnFilterChange}
-            activeProducts={activeProducts}
-            price={getFullPrice()}
-          />
-          <StyledOrderCardWrapper>
-            {products.length > 0 ? (
-              products.map((item) => (
-                <OrderCard
-                  key={item.id}
-                  title={item.name}
-                  description={item.description}
-                  image={item.image}
-                  priceText={item.priceText}
-                  characteristics={item.characteristics}
-                  properties={item.properties}
-                />
-              ))
-            ) : (
-              <OrderNoData />
-            )}
-          </StyledOrderCardWrapper>
-        </StyledOrderPageBox>
-      </PageWrapper>
-    </StyledOrderPage>
+    <Layout>
+      <StyledOrderPage>
+        <PageWrapper>
+          <StyledOrderPageBox>
+            <OrderPurchaseForm
+              handelOnFilterChange={handelOnFilterChange}
+              activeProducts={activeProducts}
+              price={getFullPrice()}
+            />
+            <StyledOrderCardWrapper>
+              {products.length > 0 ? (
+                products.map((item) => (
+                  <OrderCard
+                    key={item.id}
+                    title={item.name}
+                    description={item.description}
+                    image={item.image}
+                    priceText={item.priceText}
+                    characteristics={item.characteristics}
+                    properties={item.properties}
+                  />
+                ))
+              ) : (
+                <OrderNoData />
+              )}
+            </StyledOrderCardWrapper>
+          </StyledOrderPageBox>
+        </PageWrapper>
+      </StyledOrderPage>
+    </Layout>
   );
 };

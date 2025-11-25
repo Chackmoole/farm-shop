@@ -1,14 +1,15 @@
 import { About } from "../../blocks/about/about";
 import { Features } from "../../blocks/features/features";
-import { OrderPage } from "../../blocks/order-page/order-page";
+import { Layout } from "../../layout/layout";
 
 export const MainPage = () => {
   return (
     <>
-      <OrderPage />
       <main>
-        <About />
-        <Features />
+        <Layout>
+          <About />
+          <Features />
+        </Layout>
       </main>
     </>
   );
