@@ -6,3 +6,8 @@ export const StyledStyled = styled.header`
   align-items: center;
   min-height: 80px;
 `;
+
+export const StyledNav = styled.nav`
+  display: flex;
+  gap: 40px;
+`;
